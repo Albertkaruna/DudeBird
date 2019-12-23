@@ -1,0 +1,34 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class BGSync : MonoBehaviour
+{
+
+    public float yTransform, InsTime, DestTime;
+    private Vector3 InsPosition;
+
+    // Use this for initialization
+    void Start()
+    {
+        InsPosition = transform.position;
+        Invoke("InstantiateMe", InsTime);
+        Invoke("DestroyMe", DestTime);
+    }
+	
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(Vector3.right * yTransform * Time.deltaTime);
+    }
+
+    void DestroyMe()
+    {
+        
+        Destroy(gameObject);
+    }
+
+    void InstantiateMe()
+    {
+        Instantiate(gameObject, InsPosition, Quaternion.identity);
+    }
+}

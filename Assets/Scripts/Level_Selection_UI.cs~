@@ -1,0 +1,60 @@
+﻿using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class Level_Selection_UI : MonoBehaviour
+{
+    public GameObject Level2B, Level3B;
+    private UIManagement UIManager;
+
+    void Awake()
+    {
+        UIManager = GameObject.Find("ScoreCanvas").GetComponent<UIManagement>();
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+        if (PlayerPrefs.GetInt("L1Score") >= 100)
+        {
+            Level2B.GetComponent<Image>().sprite = UIManager.Level2Unlock;
+            Level2B.GetComponent<Button>().interactable = true;
+        }
+        if (PlayerPrefs.GetInt("L2Score") >= 200)
+        {
+            Level3B.GetComponent<Image>().sprite = UIManager.Level3Unlock;
+            Level3B.GetComponent<Button>().interactable = true;
+        }
+    }
+	
+    // Update is called once per frame
+    void Update()
+    {
+	
+    }
+
+    public void Level_1()
+    {
+        StartCoroutine(GetScenee(2));
+    }
+
+    public void Level_2()
+    {
+        StartCoroutine(GetScenee(3));
+    }
+
+    public void Level_3()
+    {
+        StartCoroutine(GetScenee(4));
+    }
+
+
+
+    IEnumerator GetScenee(int ll)
+    {
+        SceneManager.LoadSceneAsync(ll);
+        yield return new WaitForSeconds(1f);
+//		SceneManager.LoadScene(ll);
+    }
+}

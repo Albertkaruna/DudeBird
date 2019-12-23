@@ -1,0 +1,31 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class LevelGUI : MonoBehaviour
+{
+    
+    // Use this for initialization
+    void Start()
+    {
+	
+    }
+	
+    // Update is called once per frame
+    void Update()
+    {
+	
+    }
+
+    void OnMouseDown()
+    {
+        if (gameObject.name == "PlayPause")
+        {
+            
+        }
+        else if (gameObject.name == "Restart")
+        {
+            
+        }
+    }
+
+}
