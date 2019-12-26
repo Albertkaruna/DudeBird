@@ -1,28 +1,8 @@
-# README #
-This is not exactly about 4-way game. In the centre of the game there is one egg, the player needs to save the egg from the snakes those are trying to attack all the sides. Swipe operation is used to move the egg.
+> Dude Bird
 
-### What is this repository for? ###
+Dude Bird, the bird flying on the air with freedom but the gears try to kill the bird over and over again. Swipe to help the bird to avoid such gears. Keep the dude alive as long as you can.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+![Alt text](/Static/dudebird1.png?raw=true "DudeBird")
+![Alt text](/Static/dudebird2.png?raw=true "DudeBird")
+![Alt text](/Static/dudebird3.png?raw=true "DudeBird")
+![Alt text](/Static/dudebird4.png?raw=true "DudeBird")
